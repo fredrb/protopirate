@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans:400italic,400,700);
+
+html {
+    font-family: 'Droid Sans', 'Open Sans Condensed';
+    background-color: rgb(250,240,210);
+}
+
+#header {
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.game_panel {
+    width : 90%;
+    margin-left: 5%;
+    border : 1px rgb(180,168,144) solid;
+    text-align: center;
+}
+
+.game_panel ul { list-style-type: none; padding: 5px; margin: 0px}
+.game_panel li { padding : 5px ; }
+.game_panel a {
+    border : 1px rgb(180,168,144) solid;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    background-color: rgb(245,235,205);
+}
+
+#game_tr > :nth-child(odd){
+    width : 20%;
+    border : 1px rgb(180,168,144) solid;
+}
+#game_tr > :nth-child(even) { width : 60% }
