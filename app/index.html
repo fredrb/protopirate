@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/html5-boilerplate/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="app.js"></script>
+    <script src="view/viewController.js"></script>
+    <script src="view/controller/characterCtrl.js"></script>
+    <script src="view/controller/crewCtrl.js"></script>
+    <script src="view/controller/shipCtrl.js"></script>
+    <script src="view/controller/mapCtrl.js"></script>
+    <script src="view/controller/adventureCtrl.js"></script>
+    <script src="game.jq.js"></script>
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Game</title>
+</head>
+<body ng-controller="game">
+    <div id="header">
+        PROTO<b>PIRATE</b>
+    </div>
+    <div>
+        <table class="game_panel">
+            <tr id="game_tr">
+                <td>
+                    <b>Menu</b>
+                    <div id="g_menu" ng-controller="menu">
+                        <ul>
+                            <li ng-repeat="item in model.functions">
+                                <a href="#/{{item}}" ng-click="characterClick()">{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div id="g_view" ng-view></div>
+                </td>
+                <td>
+                    <b>Actions</b>
+                    <div id="g_action" ></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
